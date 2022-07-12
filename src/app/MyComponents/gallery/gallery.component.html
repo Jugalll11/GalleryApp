@@ -1,0 +1,68 @@
+<div class="heading"><h2 class="text-center">{{ title }}</h2></div>
+<div class="row">
+  <ul id="thumbnailsList">
+    <div class="center">
+      <button
+        class="btn btn-info mar"
+        [class.active]="filterby == 'all'"
+        (click)="filterby = 'all'"
+      >
+        All
+      </button>
+      <button
+        class="btn btn-info mar"
+        [class.active]="filterby == 'Mercedes'"
+        (click)="filterby = 'Mercedes'"
+      >
+        Mercedes
+      </button>
+      <button
+        class="btn btn-info mar"
+        [class.active]="filterby == 'Audi'"
+        (click)="filterby = 'Audi'"
+      >
+        Audi
+      </button>
+      <button
+        class="btn btn-info mar"
+        [class.active]="filterby == 'Bmw'"
+        (click)="filterby = 'Bmw'"
+      >
+        BMW
+      </button>
+      <button
+        class="btn btn-info mar"
+        [class.active]="filterby == 'Toyota'"
+        (click)="filterby = 'Toyota'"
+      >
+        Toyota
+      </button>
+      <button
+        class="btn btn-info mar"
+        [class.active]="filterby == 'Lexus'"
+        (click)="filterby = 'Lexus'"
+      >
+        Lexus
+      </button>
+      <button
+        class="btn btn-info mar"
+        [class.active]="filterby == 'Ford'"
+        (click)="filterby = 'Ford'"
+      >
+        Ford
+      </button>
+      <button
+        class="btn btn-info mar"
+        [class.active]="filterby == 'Lamborghini'"
+        (click)="filterby = 'Lamborghini'"
+      >
+        Lamborghini
+      </button>
+    </div>
+    <li *ngFor="let image of visibleImages | imageFilter: filterby!">
+      <a [routerLink]="['/image', image.id]">
+        <img src="{{ image.url }}" class="tn" width="200" height="160" />
+      </a>
+    </li>
+  </ul>
+</div>

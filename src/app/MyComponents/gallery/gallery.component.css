@@ -1,0 +1,31 @@
+.tn{
+    margin: 6px;
+    border: solid 4px #eee;
+    box-shadow: #555 1px 1px 8px 1px;
+}
+
+ul{
+    padding: 0;
+    width: 1200px;
+    margin: 20px auto;
+}
+
+li{
+    display: inline;
+}
+
+.mar{
+    margin: 5px;
+}
+
+.heading{
+    background-color: lightblue;
+    padding: 2px;
+    border: solid 2px;
+}
+
+center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
